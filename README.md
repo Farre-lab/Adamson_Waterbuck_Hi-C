@@ -35,7 +35,7 @@ To generate a 1kb Hi-C matrix
 Follow: https://github.com/Farre-lab/Kirkland_Bovidae/blob/main/Hi-C/5_HiCExplorer2.sh
 
 
-Step 3: Perform Correction of Normalized 1kb H5 file
+## Step 3: Perform Correction of Normalized 1kb H5 file
 
 Follow: https://github.com/Farre-lab/Kirkland_Bovidae/blob/main/Hi-C/6_HiCExplorer3.sh
 
