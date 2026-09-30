@@ -57,7 +57,7 @@ Repeat for the following resolutions: 5000, 10000, 25000, 50000, 100000, 250000,
 
 
 ## Step 7: Structural Variant Calling with EagleC2
-. This step generates a structural variant call file (`SV_calls.txt`) and a log file.
+. This step generates a structural variant call file (`{file_name}.SV_calls.txt`) and a ({file_name}.log) file.
 
 predictSV --mcool {output.mcool} --resolutions 50000,100000,250000,500000 --prob-cutoff-1 0.3 --prob-cutoff-2 0.3 -O {file_name} -g other --balance-type ICE -p 8 --intra-extend-size 1,1,1,1 --inter-extend-size 1,1,1,1
 
