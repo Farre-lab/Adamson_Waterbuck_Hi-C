@@ -6,7 +6,7 @@ Reproducible Workflow for Hi-C Variant Calling and Variant Heatmap Visualisation
 - Conda or Miniconda3
 -  mkdir -p ~/miniconda3
 -  get https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
--  ash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+-  bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
   
 - HiCExplorer:
 - conda install bioconda::hicexplorer
