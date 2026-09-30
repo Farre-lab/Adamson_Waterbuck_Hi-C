@@ -4,24 +4,24 @@ Reproducible Workflow for Hi-C Variant Calling and Variant Heatmap Visualisation
 ## Software Requirements
 
 - Conda or Miniconda3
-mkdir -p ~/miniconda3
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
-bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+- mkdir -p ~/miniconda3
+- wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+- bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
   
 - HiCExplorer:
-conda install bioconda::hicexplorer
+- conda install bioconda::hicexplorer
   
-- Cooler
-conda install bioconda::cooler
+- Cooler:
+- conda install bioconda::cooler
   
 - EagleC2:
-conda config --add channels defaults
-conda config --add channels bioconda
-conda config --add channels conda-forge
-mamba create -n EagleC scikit-learn statsmodels matplotlib cooler pyBigWig pyensembl python=3.8 joblib=1.0.1 cython=0.29.24 "tensorflow<=2.11"
+- conda config --add channels defaults
+- conda config --add channels bioconda
+- conda config --add channels conda-forge
+- mamba create -n EagleC scikit-learn statsmodels matplotlib cooler pyBigWig pyensembl python=3.8 joblib=1.0.1 cython=0.29.24 "tensorflow<=2.11"
   
-- Python 3
-conda install conda-forge::python
+- Python 3:
+- conda install conda-forge::python
 
 Step 1: Generate a 1kb H5 file
 
