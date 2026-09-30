@@ -2,7 +2,8 @@
 Reproducible Workflow for Hi-C Variant Calling and Variant Heatmap Visualisation
 
 ## Software Requirements
- 
+
+- Conda or Bioconda 
 - HiCExplorer
 - Cooler
 - EagleC2
