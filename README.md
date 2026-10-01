@@ -38,7 +38,7 @@ awk '$1 ~ /^chr/ && $4 ~ /^chr/' {Interchromosomal_Interactions.ginteractions.ts
 - Import the {Output.ginteractions.tsv} file into R and save it as a data frame.
 - Calculate the mean contact intensity (CI) for each chromosome pair using the interaction counts in column X7.
 - This code stores the calculated values in a new data frame containing all interchromosomal chromosome pairs (Waterbuck_Interchromosomal_Interaction_Pairs).
-- 
+- The first row of the interchromosomal chromosome-pair file is a buffer row set to 0. This is required because mean contact intensity values are assigned using counter + 1. The buffer row ensures that each calculated mean is written to the correct chromosome-pair row and prevents a misalignment in the output file.
 
  chromosomes <- c(paste0("chr", 1:26), "chrX")
 
