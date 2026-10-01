@@ -57,9 +57,8 @@ for (i in seq_along(chromosomes)) {
     )
     
     counter <- counter + 1
-    
-  }
-}  
+    }
+ }  
  
 -  If any mean values return Nan use the following code:
 - Waterbuck_Interchromosomal_Interaction_Pairs$mean[c(n)] <- mean(Output.ginteractions.tsv$X7[Output.ginteractions.tsv$X1 == "chr1" & Output.ginteractions.tsv$X4 == "chr2"], na.rm = TRUE)
