@@ -7,4 +7,6 @@
 #SBATCH --mem=64G
 #SBATCH --partition=biosoc2
 
+# Converts a H5 file into a COOL file
+
 hicConvertFormat --matrices {normalized_corrected.h5} --outFileName {output_1Kb.cool}  --inputFormat h5 --outputFormat cool
