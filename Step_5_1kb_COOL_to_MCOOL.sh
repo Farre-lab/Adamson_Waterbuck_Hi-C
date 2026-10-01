@@ -7,4 +7,6 @@
 #SBATCH --mem=64G
 #SBATCH --partition=biosoc2
 
+# Converts a mcool file (a cool file of multiple resolutions - specifically containing the listed --resolutions
+
 cooler zoomify {output_1kb.cool} --resolutions 1000,5000,10000,25000,50000,100000,250000,500000,1000000,2500000 -o {output.mcool}
