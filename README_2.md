@@ -41,14 +41,10 @@ awk '$1 ~ /^chr/ && $4 ~ /^chr/' {Interchromosomal_Interactions.ginteractions.ts
 - The first row of the interchromosomal chromosome-pair file is a buffer row set to 0. This is required because mean contact intensity values are assigned using counter + 1. The buffer row ensures that each calculated mean is written to the correct chromosome-pair row and prevents a one-row offset in the output file.
 
 chromosomes <- c(paste0("chr", 1:26), "chrX")
-
 counter <- 1
-
 for (i in seq_along(chromosomes)) {
-  
   for (j in i:length(chromosomes)) {
-    
-    Waterbuck_Interchromosomal_Interaction_Pairs$mean[counter] <- mean(
+     Waterbuck_Interchromosomal_Interaction_Pairs$mean[counter] <- mean(
       {Output.ginteractions.tsv}$X7[
         {Output.ginteractions.tsv}$X1 == chromosomes[i] &
           {Output.ginteractions.tsv}$X4 == chromosomes[j]
