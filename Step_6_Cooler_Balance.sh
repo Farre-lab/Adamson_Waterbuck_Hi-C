@@ -11,7 +11,7 @@
 # The resolutions to balance are specified with ::/resolutions/n - the resolutions are the same as the resolutions selcted for gneration of the mcool file
 
 # input file: {output.mcool}
-# No output file is generated, balancing the resolutions occurs within the input mcool file
+# No output file is generated, balancing of the resolutions occurs within the input mcool file
 
 cooler balance {output.mcool}::/resolutions/1000
 cooler balance {output.mcool}::/resolutions/5000
