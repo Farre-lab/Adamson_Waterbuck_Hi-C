@@ -61,7 +61,7 @@ for (i in seq_along(chromosomes)) {
   }
 
 - If any mean contact intensity values return 'NaN' use the following code:
-  Waterbuck_Interchromosomal_Interaction_Pairs$mean[c(n)] <- mean(Output.ginteractions.tsv$X7[Output.ginteractions.tsv$X1 == "chr1" & Output.ginteractions.tsv$X4 == "chr2"], na.rm = TRUE)
+- Waterbuck_Interchromosomal_Interaction_Pairs$mean[c(n)] <- mean(Output.ginteractions.tsv$X7[Output.ginteractions.tsv$X1 == "chr1" & Output.ginteractions.tsv$X4 == "chr2"], na.rm = TRUE)
 
 ## Step 8: Calculate the Overall Mean Contact Intensity
 - This is used to set the gradient for the heatmap plot
