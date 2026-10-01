@@ -66,7 +66,7 @@ predictSV --mcool {output.mcool} --resolutions 50000,100000,250000,500000 --prob
 - Generates heatmap of input Hi-C variant coordinates
 
 plot-SVbreaks --cool-uri {output.mcool}::resolutions/250000 \
-                --balance-type ICE --breakpoint-coords chr1,pos1,chr2,pos2 \
+                --balance-type ICE --breakpoint-coords {chr},pos1,{chr},pos2 \
                 --window-width 5 -O {output.png} --dpi 800
 
 
@@ -75,14 +75,14 @@ plot-SVbreaks --cool-uri {output.mcool}::resolutions/250000 \
 
 - Visualising Whole Chromosome Interactions - Heatmap Generation:
 
-hicPlotMatrix -m {500kb.h5} --dpi 800 --chromosomeOrder chr1 chr2 -o {output.png} --log1p
+hicPlotMatrix -m {500kb.h5} --dpi 800 --chromosomeOrder {chr} {chr} -o {output.png} --log1p
 
 OR optionally
 
 plot-interSVs \
   --cool-uri {output.mcool}::resolutions/500000 \
   --sv-file {SV_calls.txt} \
-  -C chr1 chr2 \
+  -C {chr} {chr} \
   -O {output.png} \
   --balance-type ICE \
   --dpi 800
