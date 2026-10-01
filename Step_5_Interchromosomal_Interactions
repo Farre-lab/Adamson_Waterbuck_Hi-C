@@ -1,0 +1,17 @@
+#!/bin/bash
+#SBATCH --job-name=Extract_Interchromosomal_Interactions
+#SBATCH --output=Extract_Interchromosomal_Interactions.out
+#SBATCH --error=Extract_Interchromosomal_Interactions.err
+#SBATCH --time=72:00:00
+#SBATCH --cpus-per-task=30
+#SBATCH --mem=64G
+#SBATCH --partition=biosoc2
+
+# Extracts rows from GINTERACTIONS file where column 1 does NOT equal column 4
+# Structure of GINTERACTIONS file: Chrom1 Pos1 Pos2 Chrom2 Pos1 Pos2 Contact_Intensity
+# This outputs the data to a new file, keeping the orgional file in tact
+
+# input file {output_500kb.ginteractions.tsv}
+# output file {Interchromosomal_Interactions.ginteractions.tsv}
+
+awk '$1 != $4 {print}' {output_500Kb.ginteractions.tsv} > {Interchromosomal_Interactions.ginteractions.tsv}
