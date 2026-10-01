@@ -8,6 +8,7 @@
 #SBATCH --partition=biosoc2
 
 # Cooler balance ensures that data is distibuted equally across resolutions (Bin sizes)
+# The resolutions to balance are specified with ::/resolutions/n - the resolutions are the same as the resolutions selcted for gneration of the mcool file
 
 cooler balance {output.mcool}::/resolutions/1000
 cooler balance {output.mcool}::/resolutions/5000
