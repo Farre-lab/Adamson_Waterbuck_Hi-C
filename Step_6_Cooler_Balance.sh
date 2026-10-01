@@ -7,6 +7,8 @@
 #SBATCH --mem=64G
 #SBATCH --partition=biosoc2
 
+# Cooler balance ensures that data is distibuted equally across resolutions (Bin sizes)
+
 cooler balance {output.mcool}::/resolutions/1000
 cooler balance {output.mcool}::/resolutions/5000
 cooler balance {output.mcool}::/resolutions/10000
