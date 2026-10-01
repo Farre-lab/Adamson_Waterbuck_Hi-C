@@ -13,6 +13,8 @@
 # Balance type ICE is used when the mcool file has been balanced with cooler balance
 
 # input file: {output.mcool}
+
+# Ouputs two files:
 # output file 1: file_name.SV_calls.txt
 # output file 2: file_name.log
 
