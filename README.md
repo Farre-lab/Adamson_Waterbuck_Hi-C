@@ -57,13 +57,13 @@ Repeat for the following resolutions: 5000, 10000, 25000, 50000, 100000, 250000,
 
 
 ## Step 7: Structural Variant Calling with EagleC2
-. This step generates a structural variant call file (`{file_name}.SV_calls.txt`) and a ({file_name}.log) file.
+- This step generates a structural variant call file (`{file_name}.SV_calls.txt`) and a ({file_name}.log) file.
 
 predictSV --mcool {output.mcool} --resolutions 50000,100000,250000,500000 --prob-cutoff-1 0.3 --prob-cutoff-2 0.3 -O {file_name} -g other --balance-type ICE -p 8 --intra-extend-size 1,1,1,1 --inter-extend-size 1,1,1,1
 
 
 ## Step 8: Hi-C Variant Heatmap Visualisation 
-. Generates heatmap of input Hi-C variant coordinates
+- Generates heatmap of input Hi-C variant coordinates
 
 plot-SVbreaks --cool-uri {output.mcool}::resolutions/250000 \
                 --balance-type ICE --breakpoint-coords chr1,pos1,chr2,pos2 \
@@ -71,9 +71,9 @@ plot-SVbreaks --cool-uri {output.mcool}::resolutions/250000 \
 
 
 ## Step 9 (OPTIONAL): Visualising Heatmap of Whole Chromosome Interactions 
-. Firstly, a 500kb resolution h5 file needs to be generated - this follows the following script exactly: https://github.com/Farre-lab/Kirkland_Bovidae/blob/main/Hi-C/4_HiCExplorer1.sh
+- Firstly, a 500kb resolution h5 file needs to be generated - this follows the following script exactly: https://github.com/Farre-lab/Kirkland_Bovidae/blob/main/Hi-C/4_HiCExplorer1.sh
 
-. Visualising Whole Chromosome Interactions - Heatmap Generation:
+- Visualising Whole Chromosome Interactions - Heatmap Generation:
 
 hicPlotMatrix -m {500kb.h5} --dpi 800 --chromosomeOrder chr1 chr2 -o {output.png} --log1p
 
