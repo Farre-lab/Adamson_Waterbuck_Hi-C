@@ -1,5 +1,5 @@
-# Adamson_Waterbuck_Hi-C
-Reproducible Workflow for Hi-C Variant Calling and Variant Heatmap Visualisation
+Adamson_Waterbuck_Hi-C
+# Reproducible Workflow for Hi-C Variant Calling and Variant Heatmap Visualisation
 
 ### Software Requirements
 
