@@ -1,0 +1,17 @@
+#!/bin/bash
+#SBATCH --job-name=Remove_Hi-C_Scaffolds
+#SBATCH --output=Remove_Hi-C_Scaffolds.out
+#SBATCH --error=Remove_Hi-C_Scaffolds.err
+#SBATCH --time=72:00:00
+#SBATCH --cpus-per-task=30
+#SBATCH --mem=64G
+#SBATCH --partition=biosoc2
+
+# The scaffold labelling in the GINTERACTIONS file is: scaffold.123
+# Extracts rows where both column one and column 4 contains a chromosome label (i.e. chr1)
+# This outputs the data toa new file, keeping the orgional file in tact
+
+# input file: {Interchromosomal_Interactions.ginteractions.tsv}
+# output file: {Output.ginteractions.tsv}
+
+awk '$1 ~ /^chr/ && $4 ~ /^chr/' {Interchromosomal_Interactions.ginteractions.tsv} > {Output.ginteractions.tsv}
