@@ -7,6 +7,10 @@
 #SBATCH --mem=64G
 #SBATCH --partition=biosoc2
 
-# Converts a H5 file into a COOL file
+# hicConvertFormat - avaliable within HiCExplorer conda enviroment
+# input file: {normalized_corrected.h5}
+# output file: {output_1kb.coo}
+
+# Converts a H5 file into a COOL file, file types are determined by --inputFormat and --outputFormat
 
 hicConvertFormat --matrices {normalized_corrected.h5} --outFileName {output_1Kb.cool}  --inputFormat h5 --outputFormat cool
