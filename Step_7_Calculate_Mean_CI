@@ -1,0 +1,27 @@
+R Script ran in RStudio
+
+chromosomes <- c(paste0("chr", 1:26), "chrX") # Tells the script what chromosome values are in the GINTERACTIONS filE
+
+ counter <- 1 # Sets the first row number to output data to
+  
+for (i in seq_along(chromosomes)) {
+  
+  for (j in i:length(chromosomes)) {
+
+# Calculates the mean contact intensity for each specific chromosome pair, outputting the mean to {Waterbuck_Interchromosomal_Interaction_Pairs$mean}
+    Waterbuck_Interchromosomal_Interaction_Pairs$mean[counter] <- mean(  
+      Output.ginteractions.tsv$X7[
+        Output.ginteractions.tsv$X1 == chromosomes[i] &
+          Output.ginteractions.tsv$X4 == chromosomes[j]
+      ],
+      na.rm = TRUE
+    )
+
+    counter <- counter + 1 # Ouputs the calculated mean to a specific row, the +1 means rown_number + 1, so each mean value is ouput to the specific correct row
+    
+  }
+}  
+
+# Common Error:
+. If any mean values return Nan use the following code:
+Waterbuck_Interchromosomal_Interaction_Pairs$mean[c(n)] <- mean(Output.ginteractions.tsv$X7[Output.ginteractions.tsv$X1 == "chr1" & Output.ginteractions.tsv$X4 == "chr2"], na.rm = TRUE)
