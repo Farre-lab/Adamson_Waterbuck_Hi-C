@@ -58,7 +58,7 @@ for (i in seq_along(chromosomes)) {
    
    counter <- counter + 1
    
-    }
+   }
  }  
  
 -  If any mean values return Nan use the following code:
