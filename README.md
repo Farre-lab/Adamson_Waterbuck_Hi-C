@@ -47,16 +47,17 @@ chromosomes <- c(paste0("chr", 1:26), "chrX")
 for (i in seq_along(chromosomes)) {
   
   for (j in i:length(chromosomes)) {
-    
-    Waterbuck_Interchromosomal_Interaction_Pairs$mean[counter] <- mean(
+  
+  Waterbuck_Interchromosomal_Interaction_Pairs$mean[counter] <- mean(
       Output.ginteractions.tsv$X7[
         Output.ginteractions.tsv$X1 == chromosomes[i] &
           Output.ginteractions.tsv$X4 == chromosomes[j]
       ],
       na.rm = TRUE
     )
-    
-    counter <- counter + 1
+   
+   counter <- counter + 1
+   
     }
  }  
  
