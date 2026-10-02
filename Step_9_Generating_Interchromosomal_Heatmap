@@ -1,1 +1,21 @@
-R Script ran in RStudio
+# R Script ran in RStudio
+# ggplot geom_tile avaliable with ggplot2
+
+ggplot(Waterbuck_Interchromosomal_Interaction_Pairs$mean, # Plots the mean contact intensity calculated previously
+
+# Plots the X and Y axis as the chromosome values, and the mean contact intensity as the data within the heatmap - structures the heatmap
+aes(x = Waterbuck_Interchromosomal_Interaction_Pairs$Mean_CI$X1, y = Waterbuck_Interchromosomal_Interaction_Pairs$Mean_CI$X2, fill = Waterbuck_Interchromosomal_Interaction_Pairs$Mean_CI$X3))
+
+# geom_tile - dtermines the plot type, in this case a heatmap
++ geom_tile() + 
+
+# Plots the x-axis as chromosome number (from 1-26, with chrX represented as 27 as numeric value is required)
+scale_x_continuous( breaks = 1:27,
+
+# # Plots the y-axis as chromosome number (from 1-26, with chrX represented as 27 as numeric value is required)
+labels = 1:27 ) + scale_y_continuous( breaks = 1:27,
+labels = 1:27 ) + 
+
+# Deterimies what colours are used for the gradient in the heatmap
+# The midpoint value sets the gradient for the heatmap
+scale_fill_gradient2(low = "blue", mid = "white", high = "red", midpoint = Overall_Mean_Contact_Intensity)
