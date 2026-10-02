@@ -3,7 +3,8 @@ R Script ran in RStudio
 chromosomes <- c(paste0("chr", 1:26), "chrX") # Tells the script what chromosome values are in the GINTERACTIONS filE
 
  counter <- 1 # Sets the first row number to output data to
-  
+
+# Loops the code through all chromosome values in the ginteractions file
 for (i in seq_along(chromosomes)) {
   
   for (j in i:length(chromosomes)) {
