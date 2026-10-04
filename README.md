@@ -1,4 +1,4 @@
-# Reproducible Workflow for Calculating the Interchromosomal Interactions Mean Contact Intensity (CI) and Generating Heatmap Visualisation of the Mean CI
+# Reproducible Workflow for Calculating the Interchromosomal Interactions Mean Contact Intensity (CI) and Heatmap Visualisation of the Mean CI
 
 ### Software Requirements:
 - HiCExplorer
